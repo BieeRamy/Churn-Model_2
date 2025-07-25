@@ -65,7 +65,8 @@ shap_values = explainer(X_transformed)
 
 # Display beeswarm plot
 st.set_option('deprecation.showPyplotGlobalUse', False)
-sh
+shap.summary_plot(shap_values, X_transformed, show=False)
+st.pyplot()
 
 # Show Data
 st.subheader("📄 Preview of Data with Predictions")
