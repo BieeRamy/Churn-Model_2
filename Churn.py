@@ -78,5 +78,8 @@ st.download_button(
     data=df.to_csv(index=False),
     file_name="predictions.csv",
     mime="text/csv"
-)ap.summary_plot(shap_values, X_transformed, show=False)
+)
+
+# SHAP Beeswarm Plot
+shap.summary_plot(shap_values, X_transformed, show=False)
 st.pyplot()
